@@ -2,35 +2,35 @@ const hamburger = document.querySelector(".hamburger");
 const lists = document.querySelector(".menuLists");
 const nav = document.querySelector("nav");
 
-hamburger.addEventListener("click", function () {
-  if (nav.classList.contains("nav-scrolled")) {
-    nav.classList.toggle("nav-scrolled");
-  }
+let menuLists = false;
 
+hamburger.addEventListener("click", function () {
+  nav.classList.remove("nav--scrolled");
+  if (menuLists) {
+    menuLists = false;
+  } else {
+    menuLists = true;
+  }
   hamburger.classList.toggle("is-active");
   lists.classList.toggle("hidden");
 });
 
 //navbar
 
-const header = document.querySelector(".hero-parent");
-const navHeight = nav.getBoundingClientRect().height;
+window.addEventListener("scroll", () => {
+  console.log(scrollY);
 
-console.log(navHeight);
-
-const stickyNav = function (entries) {
-  const [entry] = entries;
-  if (!entry.isIntersecting) nav.classList.add("nav-scrolled");
-  else nav.classList.remove("nav-scrolled");
-};
-
-const headerObserver = new IntersectionObserver(stickyNav, {
-  root: null,
-  threshold: 0,
-  rootMargin: `-${navHeight}px`,
+  if (!menuLists) {
+    if (scrollY > 150) {
+      nav.classList.add("nav--scrolled");
+    } else {
+      nav.classList.remove("nav--scrolled");
+    }
+  }
 });
 
-headerObserver.observe(header);
+const header = document.querySelector(".hero-parent");
+const navHeight = nav.getBoundingClientRect().height;
 
 //slider
 const slider = function () {
@@ -139,13 +139,13 @@ const darkMode = function () {
   btndark.classList.add("fa-sun");
 
   document.documentElement.style.setProperty("--background", "#000");
-  document.documentElement.style.setProperty("--primary", "#eef1ff");
+  document.documentElement.style.setProperty("--primary", "#F1F1F1");
 };
 
 const lightMode = function () {
   btndark.classList.remove("fa-sun");
   btndark.classList.add("fa-moon");
-  document.documentElement.style.setProperty("--background", "#eef1ff");
+  document.documentElement.style.setProperty("--background", "#F1F1F1");
   document.documentElement.style.setProperty("--primary", "#313131");
 };
 
