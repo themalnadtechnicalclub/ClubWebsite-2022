@@ -1,0 +1,277 @@
+/* changing default css behaviour */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* font-selection */
+@font-face {
+  font-family: algerian;
+  src: url(../fonts/ALGER.ttf);
+}
+@font-face {
+  font-family: primary;
+  src: url(../fonts/Gilroy-ExtraBold.otf);
+}
+@font-face {
+  font-family: secondary;
+  src: url(../fonts/AvertaDemo-Regular.otf);
+}
+@font-face {
+  font-family: primary;
+  src: url("//db.onlinewebfonts.com/t/12ca6eb8a45b8ac406fb5a09bb9daab2.eot");
+  src: url("//db.onlinewebfonts.com/t/12ca6eb8a45b8ac406fb5a09bb9daab2.eot?#iefix")
+      format("embedded-opentype"),
+    url("//db.onlinewebfonts.com/t/12ca6eb8a45b8ac406fb5a09bb9daab2.woff2")
+      format("woff2"),
+    url("//db.onlinewebfonts.com/t/12ca6eb8a45b8ac406fb5a09bb9daab2.woff")
+      format("woff"),
+    url("//db.onlinewebfonts.com/t/12ca6eb8a45b8ac406fb5a09bb9daab2.ttf")
+      format("truetype"),
+    url("//db.onlinewebfonts.com/t/12ca6eb8a45b8ac406fb5a09bb9daab2.svg#Lyon Display Web Black")
+      format("svg");
+}
+@font-face {
+  font-family: quotetext;
+  src: url(../fonts/Gilroy-ExtraBold.otf);
+}
+/* body styling */
+:root {
+  --primary: #313131;
+  --secondary: tomato;
+  --background: #f1f1f1;
+}
+
+body {
+  font-family: secondary;
+  color: var(--primary);
+  background-color: var(--background);
+}
+
+/* navbar styling */
+
+.logo {
+  height: auto;
+  max-width: 5em;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0em;
+  left: 0em;
+  right: 0em;
+  z-index: 5;
+}
+
+.nav--scrolled {
+  background-color: var(--background);
+}
+
+.logo {
+  width: 18vw;
+  height: auto;
+}
+.hamburger {
+  display: block;
+  position: relative;
+  padding: 16px 16px;
+  margin: auto 0;
+  top: 0em;
+  right: 0em;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  z-index: 5;
+}
+.hamburger span {
+  display: block;
+  width: 38px;
+  height: 5px;
+  margin-bottom: 5px;
+  position: relative;
+  background-color: var(--primary);
+  border-radius: 6px;
+
+  transform-origin: 0 0;
+  transition: 0.4s;
+}
+
+.hamburger:hover span:nth-child(2) {
+  transform: translateX(10px);
+  background-color: var(--primary);
+}
+
+.hamburger.is-active span:nth-child(1) {
+  transform: translate(0px, -2px) rotate(45deg);
+}
+.hamburger.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translateX(15px);
+}
+
+.hamburger.is-active span:nth-child(3) {
+  transform: translate(-3px, 3px) rotate(-45deg);
+}
+.menu {
+  display: flex;
+}
+
+.menuLists {
+  background-color: var(--secondary);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+  min-height: 100vh;
+  transition: all 0.5s ease-in;
+  z-index: 4;
+  margin: 0;
+  padding: 0;
+}
+
+.menuLists ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menuLists ul li a {
+  font-family: primary;
+  color: var(--primary);
+  text-decoration: none;
+  font-size: 2em;
+  line-height: 1.5em;
+  /* border: 2px solid red; */
+}
+.menuLists ul li a:hover {
+  color: var(--background);
+}
+
+.hidden {
+  display: none;
+}
+
+/* footer  */
+.footer-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.socialMediaLinks {
+  font-size: 2em;
+  padding: 1em 0;
+  text-align: center;
+}
+.social {
+  margin: auto 0;
+  padding: 0 0.5em;
+  text-decoration: none;
+  color: var(--primary);
+  transition: color 1s ease-in-out;
+}
+.social:hover {
+  color: var(--secondary);
+}
+.addressContact {
+  height: 50%;
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.address {
+  padding: 0.5em 0;
+  text-decoration: none;
+  color: var(--primary);
+  text-align: center;
+  font-size: 1.2em;
+  font-family: secondary;
+}
+.mobile,
+.mail {
+  padding: 0.5em 0;
+  font-family: secondary;
+  text-align: center;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: var(--primary);
+}
+.copyrights,
+.fixit {
+  text-align: center;
+  font-size: 1em;
+  max-width: 90vw;
+  margin: 0.5em 0;
+}
+.fix-link {
+  text-decoration: none;
+  color: var(--secondary);
+}
+.fix-link:hover {
+  color: var(--primary);
+}
+.copyrights {
+  font-size: 1em;
+  margin: 5em 0;
+}
+
+/* Responsive */
+@media screen and (min-width: 650px) {
+  body {
+    margin: 0 5em;
+  }
+  nav {
+    margin: 0 5em;
+  }
+}
+
+@media screen and (min-width: 950px) {
+  body {
+    margin: 0 5em;
+  }
+  nav {
+    margin: 0 5em;
+  }
+}
+.dark {
+  font-size: 1.5em;
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0.5em;
+  background-color: rgb(156, 156, 156);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  color: var(--primary);
+  transition: all 0.5s ease-in-out;
+}
+
+.dark:hover {
+  background-color: rgb(179, 177, 177);
+}
+
+.dark--mode {
+  transition: all 0.5s ease-in;
+}
