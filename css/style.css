@@ -37,23 +37,19 @@ html {
 }
 @font-face {
   font-family: quotetext;
-  src: url(../fonts/LeMonde\ Livre\ Classic\ Normal.otf);
+  src: url(../fonts/Gilroy-ExtraBold.otf);
 }
 /* body styling */
 :root {
   --primary: #313131;
   --secondary: tomato;
-  --background: #eef1ff;
+  --background: #f1f1f1;
 }
 
 body {
   font-family: secondary;
   color: var(--primary);
   background-color: var(--background);
-
-  /* background-image: url(../images/back.jpg);
-  background-repeat: no-repeat;
-  background-size: cover; */
 }
 
 /* navbar styling */
@@ -72,11 +68,12 @@ nav {
   left: 0em;
   right: 0em;
   z-index: 5;
-  border: 2pxm solid red;
 }
-.nav-scrolled {
+
+.nav--scrolled {
   background-color: var(--background);
 }
+
 .logo {
   width: 18vw;
   height: auto;
@@ -94,7 +91,7 @@ nav {
   outline: none;
   background: none;
   cursor: pointer;
-  z-index: 2;
+  z-index: 5;
 }
 .hamburger span {
   display: block;
@@ -130,7 +127,7 @@ nav {
 }
 
 .menuLists {
-  background-color: #b1b2ff;
+  background-color: var(--secondary);
   position: fixed;
   top: 0;
   right: 0;
@@ -141,7 +138,7 @@ nav {
   min-width: 100vw;
   min-height: 100vh;
   transition: all 0.5s ease-in;
-  z-index: 1;
+  z-index: 4;
   margin: 0;
   padding: 0;
 }
@@ -156,9 +153,11 @@ nav {
   color: var(--primary);
   text-decoration: none;
   font-size: 2em;
+  line-height: 1.5em;
+  /* border: 2px solid red; */
 }
 .menuLists ul li a:hover {
-  color: white;
+  color: var(--background);
 }
 
 .hidden {
@@ -197,7 +196,7 @@ nav {
 
 /* hero styling */
 .hero-parent {
-  min-height: 100vh;
+  min-height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,7 +312,7 @@ nav {
   font-size: 1em;
   padding: 1em 0;
 }
-.techtalk {
+.saviskaar {
   margin-bottom: 5em;
 }
 
@@ -414,7 +413,7 @@ nav {
     height: 40em;
   }
   .main-heading {
-    font-size: 3em;
+    font-size: 3.5em;
   }
   .tagline {
     font-size: 1.5em;
@@ -433,11 +432,24 @@ nav {
   }
 }
 .dark {
-  font-size: 2em;
+  font-size: 1.5em;
   display: flex;
+  cursor: pointer;
   justify-content: center;
   align-items: center;
-  padding: 0 1em;
+  margin: auto 0.5em;
+  background-color: rgb(156, 156, 156);
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
   color: var(--primary);
   transition: all 0.5s ease-in-out;
+}
+
+.dark:hover {
+  background-color: rgb(179, 177, 177);
+}
+
+.dark--mode {
+  transition: all 0.5s ease-in;
 }
