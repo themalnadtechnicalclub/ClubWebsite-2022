@@ -224,9 +224,10 @@ nav {
     height:100px;
   }
   .paralax-title{
-    left:15%;
+    left:20%;
     bottom:80%;
-    font-size: larger;
+    /*font-size: larger;*/
+    font-size: 20pt;
   }
 }
 .dark {
