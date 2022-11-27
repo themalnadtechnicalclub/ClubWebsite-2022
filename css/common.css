@@ -242,6 +242,10 @@ nav {
   }
   nav {
     margin: 0 5em;
+    border-bottom: 2px solid var(--primary);
+  }
+  .marginTop {
+    margin-top: 15vh;
   }
 }
 

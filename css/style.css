@@ -194,7 +194,8 @@ nav {
 
 /* hero styling */
 .hero-parent {
-  min-height: 90vh;
+  margin-top: 10vh;
+  min-height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -239,7 +240,6 @@ nav {
   font-family: quotetext;
   color: var(--primary);
   padding: 2em 0.8em;
-  padding-top: 0;
   font-size: 1.5em;
   letter-spacing: 5px;
 }
@@ -393,6 +393,9 @@ nav {
   nav {
     margin: 0 5em;
   }
+  .main-heading {
+    margin-top: 15vh;
+  }
 }
 
 @media screen and (min-width: 950px) {
@@ -408,10 +411,14 @@ nav {
     height: 35em;
     margin: auto;
   }
+  .hero-parent {
+    margin-top: 0vh;
+  }
   .slide {
     height: 40em;
   }
   .main-heading {
+    margin-top: 15vh;
     font-size: 3.5em;
   }
   .tagline {

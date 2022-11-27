@@ -1,0 +1,132 @@
+.container {
+  margin: 0 1.5em;
+}
+
+.heading {
+  margin: 3em 0;
+  margin-bottom: 0.2em;
+  font-family: primary;
+  font-size: 2em;
+}
+
+.heading::after {
+  content: " ";
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+.desc {
+  font-size: 1.2em;
+}
+
+.techtalkcards {
+  margin: 2em auto;
+}
+
+.techtalk {
+  width: 100%;
+  height: 30vh;
+
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 2em 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.card-card {
+  height: 50%;
+  color: white;
+  background-color: #313131;
+  font-family: quotetext;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.techheading {
+  font-size: 1.5em;
+}
+.readMore {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: var(--background);
+  transition: all 0.5s ease-in-out;
+  background-color: var(--secondary);
+  padding: 5px;
+}
+.readMore:hover {
+  color: var(--secondary);
+  background-color: var(--background);
+}
+
+@media screen and (min-width: 650px) {
+  .techtalk {
+    max-width: 100%;
+    height: 30vh;
+  }
+  .techtalkcards {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 5vw;
+  }
+  .readMore {
+    font-size: 1.5em;
+  }
+  .techheading {
+    font-size: 2em;
+  }
+  .heading {
+    font-size: 4em;
+  }
+}
+
+/* //bgimages */
+
+.blockchain {
+  background-image: url("../images/techtalk/blockchain.jpg");
+}
+.bp {
+  background-image: url("../images/techtalk/brain_fingerprinting\(3\).jpg");
+}
+
+.dt {
+  background-image: url("/images/techtalk/digital-twin\(1\).png");
+}
+
+.spacex {
+  background-image: url("../images/techtalk/spacex-starlink\(3\).jpg");
+}
+
+.qi {
+  background-image: url("../images/techtalk/quantum-internet\(1\).jpg");
+}
+
+.jpl {
+  background-image: url("../images/techtalk/jpl-helicopter.jpg");
+}
+
+.blue {
+  background-image: url("../images/techtalk/blue-brain.jpg");
+}
+
+.bose {
+  background-image: url("../images/techtalk/bose-einstein.jpg");
+}
+
+.lh {
+  background-image: url("../images/techtalk/large-hardon-collider.jpg");
+}
+.va {
+  background-image: url("../images/techtalk/voice-assistants.jpg");
+}
+
+.neura {
+  background-image: url("../images/techtalk/Neuralink\(1\).jpeg");
+}
