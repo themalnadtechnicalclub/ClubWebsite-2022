@@ -1,5 +1,4 @@
 /* changing default css behaviour */
-
 * {
   margin: 0;
   padding: 0;
@@ -171,10 +170,10 @@ nav {
   text-align: center;
   font-family: algerian;
   line-height: 1em;
+  /* color: var(--background); */
 
-  -webkit-text-fill-color: transparent;
-  -webkit-text-stroke-color: var(--primary);
-  -webkit-text-stroke-width: 0.8px;
+  /* -webkit-text-stroke-color: var(--primary);
+  -webkit-text-stroke-width: 0.1px; */
 
   /* background: -webkit-gradient(
     linear,
@@ -183,7 +182,6 @@ nav {
     from(#f5c21b),
     to(#d17000)
   ); */
-  background-clip: text;
 }
 
 .tagline {
@@ -403,6 +401,7 @@ nav {
   }
   nav {
     margin: 0 5em;
+    border-bottom: 2px solid var(--primary);
   }
   .slider {
     min-width: 80vw;
