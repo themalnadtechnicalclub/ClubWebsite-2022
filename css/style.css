@@ -1,5 +1,4 @@
 /* changing default css behaviour */
-
 * {
   margin: 0;
   padding: 0;
@@ -68,6 +67,7 @@ nav {
   left: 0em;
   right: 0em;
   z-index: 5;
+  border-bottom: 2px solid var(--primary);
 }
 
 .nav--scrolled {
