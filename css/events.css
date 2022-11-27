@@ -1,3 +1,106 @@
 .container {
   margin: 0 1.5em;
 }
+
+.heading {
+  margin: 3em 0;
+  margin-bottom: 0.2em;
+  font-family: primary;
+  font-size: 2.5em;
+}
+.headingNoUnderline {
+  margin: 3em 0;
+  margin-bottom: 0.2em;
+  font-family: primary;
+  font-size: 2.5em;
+  line-height: 0.5em;
+}
+
+.heading::after {
+  content: " ";
+  margin-top: 5px;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+.desc {
+  margin: 2em 0;
+  font-size: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+ul li span {
+  color: var(--primary);
+  font-size: 2em;
+  transition: all 0.5s ease-in-out;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--primary);
+  cursor: pointer;
+  font-size: 2em;
+  transition: all 0.5s ease-in-out;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
+.eventNames {
+  margin: 1em 0;
+  padding: 10px;
+  height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--secondary);
+  border-radius: 10px;
+  font-family: primary;
+  text-align: center;
+
+  text-decoration: none;
+}
+
+/* Enigma page */
+
+.head2 {
+  font-family: secondary;
+  margin-bottom: 2em;
+}
+.head2::after {
+  content: " ";
+  display: block;
+  margin-top: 5px;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+.domains {
+  font-size: 1.5em;
+}
+.head3 {
+  color: var(--secondary);
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  font-size: 2em;
+}
+footer {
+  margin-top: 3em;
+}
+
+@media screen and (min-width: 950px) {
+  .heading {
+    font-size: 4em;
+  }
+  .headingNoUnderline {
+    font-size: 4em;
+  }
+
+  .desc {
+    font-size: 1.2em;
+  }
+  .container {
+    margin: 0;
+  }
+}

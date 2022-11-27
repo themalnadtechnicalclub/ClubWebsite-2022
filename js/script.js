@@ -21,7 +21,7 @@ window.addEventListener("scroll", () => {
   console.log(scrollY);
 
   if (!menuLists) {
-    if (scrollY > 150) {
+    if (scrollY > 10) {
       nav.classList.add("nav--scrolled");
     } else {
       nav.classList.remove("nav--scrolled");
