@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 html {
   scroll-behavior: smooth;
@@ -14,7 +15,7 @@ html {
   src: url(../fonts/ALGER.ttf);
 }
 @font-face {
-  font-family: primary;
+  font-family: test;
   src: url(../fonts/Gilroy-ExtraBold.otf);
 }
 @font-face {
