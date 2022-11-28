@@ -1,109 +1,98 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  margin: 0 1.5em;
+}
+.heading {
+  margin: 3em 0;
+  margin-bottom: 0.2em;
+  font-family: primary;
+
+  font-size: 2.5em;
+}
+.head2 {
+  font-family: quotetext;
+  font-size: 2em;
+}
+
+.heading::after {
+  content: " ";
+  margin-top: 5px;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+
+.card-parent {
+  width: 100%;
+}
+.card {
+  /* From https://css.glass */
+  /* From https://css.glass */
+  background: rgba(239, 104, 104, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(17.3px);
+  -webkit-backdrop-filter: blur(17.3px);
+  display: flex;
+  /* color: var(--primary); */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80vw;
+  margin: 1em auto;
+  border-radius: 20px;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.card-img {
+  margin: 20px;
+  height: 22vh;
+  object-fit: cover;
+  width: 45%;
+  border-radius: 20px;
+}
+.name {
+  font-family: test;
+  text-align: center;
+  font-size: 1.5em;
+  padding: 0.3em 0;
+}
+.desc {
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 1em;
+}
+
+@media screen and (min-width: 650px) {
+  .heading {
+    font-size: 4em;
   }
-  
-  .row {
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2em 1em;
-    text-align: center;
-  }
-  .column {
-    width: 100%;
-    padding: 0.5em 0;
-  }
-  h1 {
-    width: 100%;
-    text-align: center;
-    font-size: 2em;
-    color: var(--primary);
+  .card-parent {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 10px;
   }
   .card {
-    box-shadow: 0 0 2.4em rgba(25, 0, 58, 0.1);
-    padding: 3.5em 1em;
-    border-radius: 0.6em;
-    color: var(--primary);
-    cursor: pointer;
-    transition: 0.3s;
-    background-color: var(--secondary);
+    width: 18vw;
+    min-height: 35vh;
   }
-  
-  .card .img-container {
-    width: 8em;
-    height: 8em;
-    /*background-color: #a993ff;*/
-    padding: 0.5em;
-    border-radius: 50%;
-    margin: 0 auto 2em auto;
+  .name {
+    font-size: 1.5em;
   }
-  .card img {
-    width: 100%;
-    border-radius: 50%;
+  .desc {
+    font-size: 1.2em;
   }
-  .card h3 {
-    font-weight: 500;
-    font-size: 2em;
-    font-family: quotetext;
-     padding: 0.5em 0;
+  .head2 {
+    font-size: 3em;
+    margin: 1em 0;
   }
-  .card p {
-    font-weight: 300;
-    font-family: --secondary;
-    margin: 0.5em 0 2em 0;
-    letter-spacing: 2px;
-  }
-  .icons {
-    width: 50%;
-    min-width: 180px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-  }
-  .card a {
-    text-decoration: none;
-    color: inherit;
-    font-size: 1.4em;
-  }
-  .card:hover {
-    /*background: linear-gradient(#6045ea, #8567f7);*/
-   /*color: #ffffff;*/
-   color: var(--secondary);
-    background-color: var(--primary);
-  }
-  .card:hover .img-container {
-    
-    transform: scale(1.2);
-  }
-  .card:hover h3{
-    
-    transform: scale(1.15);
-  }
-  .card:hover p{
-    
-    transform: scale(1.2);
-  }
-  img{
-      width: 8em;
-      height: 8em;
-  }
-  @media screen and (min-width: 768px) {
-    section {
-      padding: 1em 7em;
-    }
-  }
-  @media screen and (min-width: 992px) {
-    section {
-      padding: 1em;
-    }
-    .card {
-      padding: 5em 1em;
-    }
-    .column {
-      flex: 0 0 33.33%;
-      max-width: 33.33%;
-      padding: 0 1em;
-    }
-  }
+}
