@@ -1,0 +1,87 @@
+.container {
+  margin: 0 1.5em;
+}
+
+.heading {
+  margin: 3em 0;
+  margin-bottom: 0.2em;
+  font-family: primary;
+  font-size: 2.5em;
+}
+.headingNoUnderline {
+  margin: 3em 0;
+  margin-bottom: 0.2em;
+  font-family: primary;
+  font-size: 2.5em;
+  line-height: 0.5em;
+}
+
+.heading::after {
+  content: " ";
+  margin-top: 5px;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+.desc {
+  font-size: 1em;
+}
+.cardparent {
+  margin: 2em 0;
+}
+.subhead {
+  font-family: primary;
+  font-size: 1.7em;
+  margin: 0.5em 0;
+}
+.cardlink {
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 5px;
+  color: var(--primary);
+  background-color: var(--background);
+  transition: all 0.5s ease-in-out;
+  margin: 10px 0;
+}
+.cardlink:hover {
+  background-color: var(--primary);
+  color: var(--background);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin: 5vh 0;
+  background-color: var(--secondary);
+}
+.tech--img {
+  width: 100%;
+}
+
+@media screen and (min-width: 950px) {
+  .heading {
+    font-size: 4em;
+  }
+  .desc {
+    font-size: 1.2em;
+  }
+  .container {
+    margin: 0;
+  }
+  .cardparent {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .card {
+    width: 20vw;
+  }
+  .subhead {
+    font-size: 2em;
+  }
+  .cardlink {
+    font-size: 1.5em;
+  }
+}

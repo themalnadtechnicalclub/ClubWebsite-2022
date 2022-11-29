@@ -7,6 +7,16 @@
   margin-top: 15vh;
 }
 
+.img--about {
+  width: 80vw;
+  margin: 2em;
+}
+
+.flex-img {
+  display: flex;
+  justify-content: center;
+}
+
 .heading {
   margin: 3em 0;
   margin-bottom: 0.2em;
@@ -39,5 +49,10 @@
   }
   .subhead {
     font-size: 2.5em;
+  }
+  .img--about {
+    width: 90vw;
+    height: 50vh;
+    object-fit: cover;
   }
 }

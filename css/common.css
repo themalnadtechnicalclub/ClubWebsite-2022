@@ -42,9 +42,12 @@ html {
 }
 /* body styling */
 :root {
-  --primary: #313131;
+  /* --primary: #313131;
+    --secondary: tomato;
+    --background: #f1f1f1; */
+  --primary: #f1f1f1;
   --secondary: tomato;
-  --background: #f1f1f1;
+  --background: #000;
 }
 
 body {
@@ -129,7 +132,7 @@ nav {
 }
 
 .menuLists {
-  background-color: var(--secondary);
+  background-color: rgb(62, 61, 61);
   position: fixed;
   top: 0;
   right: 0;
