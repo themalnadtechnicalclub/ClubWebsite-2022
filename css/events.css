@@ -88,6 +88,10 @@ ul li a:hover {
 footer {
   margin-top: 3em;
 }
+.img--about {
+  width: 80vw;
+  margin: 2em 0;
+}
 
 @media screen and (min-width: 950px) {
   .heading {
@@ -102,5 +106,10 @@ footer {
   }
   .container {
     margin: 0;
+  }
+  .img--about {
+    width: 90vw;
+    height: 50vh;
+    object-fit: cover;
   }
 }

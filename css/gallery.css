@@ -24,7 +24,7 @@
   transition: all 0.5s ease-in-out;
 }
 .img:hover {
-  transform: scale(1.1);
+  transform: scale(0.95);
 }
 
 @media screen and (min-width: 950px) {
@@ -34,6 +34,8 @@
   .img {
     /* margin: 2em !important; */
     max-width: 25vw;
+    height: 30vh;
+    object-fit: cover;
   }
   .gridlayout {
     display: grid;
