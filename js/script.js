@@ -4,7 +4,7 @@ const nav = document.querySelector("nav");
 
 let menuLists = false;
 
-hamburger.addEventListener("click", function () {
+const ham = function () {
   nav.classList.remove("nav--scrolled");
   if (menuLists) {
     menuLists = false;
@@ -13,7 +13,11 @@ hamburger.addEventListener("click", function () {
   }
   hamburger.classList.toggle("is-active");
   lists.classList.toggle("hidden");
-});
+};
+
+hamburger.addEventListener("click", ham);
+
+document.querySelector(".footerclick").addEventListener("click", ham);
 
 //navbar
 
@@ -122,33 +126,6 @@ cardContain.forEach(function (entry, i) {
 
 //dark mode
 
-const btndark = document.querySelector(".dark--mode");
-let dark = false;
-btndark.addEventListener("click", function () {
-  if (!dark) {
-    darkMode();
-    dark = true;
-  } else {
-    dark = false;
-    lightMode();
-  }
-});
-
-const darkMode = function () {
-  btndark.classList.remove("fa-moon");
-  btndark.classList.add("fa-sun");
-
-  document.documentElement.style.setProperty("--background", "#000");
-  document.documentElement.style.setProperty("--primary", "#F1F1F1");
-};
-
-const lightMode = function () {
-  btndark.classList.remove("fa-sun");
-  btndark.classList.add("fa-moon");
-  document.documentElement.style.setProperty("--background", "#F1F1F1");
-  document.documentElement.style.setProperty("--primary", "#313131");
-};
-
 //navbar
 
 // window.onscroll = function () {
@@ -159,3 +136,55 @@ const lightMode = function () {
 //     document.querySelector(".nav").classList.remove("nav-scrolled");
 //   }
 // };
+
+///dark mode
+
+if (!localStorage.getItem("dark")) {
+  localStorage.setItem("dark", false);
+}
+let dark = localStorage.getItem("dark");
+const btndark = document.querySelector(".dark--mode");
+
+window.addEventListener("load", function () {
+  if (dark) {
+    btndark.classList.remove("fa-moon");
+    btndark.classList.add("fa-sun");
+  } else {
+    btndark.classList.add("fa-moon");
+    btndark.classList.remove("fa-sun");
+  }
+});
+
+btndark.addEventListener("click", function (e) {
+  e.preventDefault();
+  dark = localStorage.getItem("dark");
+  console.log(dark);
+  if (dark) {
+    console.log("inmside tru");
+    lightMode();
+  } else {
+    console.log("inside");
+    btndark.classList.remove("fa-moon");
+    btndark.classList.add("fa-sun");
+    document.documentElement.style.setProperty("--background", "#000");
+    document.documentElement.style.setProperty("--primary", "#F1F1F1");
+    localStorage.setItem("dark", 1);
+  }
+  // dark ? lightMode() : darkMode();
+});
+
+const darkMode = function () {
+  btndark.classList.remove("fa-moon");
+  btndark.classList.add("fa-sun");
+  document.documentElement.style.setProperty("--background", "#000");
+  document.documentElement.style.setProperty("--primary", "#F1F1F1");
+  localStorage.setItem("dark", 1);
+};
+
+const lightMode = function () {
+  localStorage.setItem("dark", 0);
+  btndark.classList.add("fa-moon");
+  btndark.classList.remove("fa-sun");
+  document.documentElement.style.setProperty("--background", "#F1F1F1");
+  document.documentElement.style.setProperty("--primary", "#313131");
+};

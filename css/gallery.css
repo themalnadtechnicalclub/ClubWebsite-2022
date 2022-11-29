@@ -1,0 +1,43 @@
+.container {
+  margin: 0 1.5em;
+}
+.heading {
+  margin: 3em 0;
+  margin-bottom: 2em;
+  font-family: primary;
+  font-size: 2em;
+}
+
+.heading::after {
+  content: " ";
+  margin-top: 5px;
+  display: block;
+  height: 3px;
+  width: 100%;
+  background-color: var(--secondary);
+}
+.img {
+  width: 100%;
+  margin: 1em 0;
+  border-radius: 10px;
+  transform: scale(1);
+  transition: all 0.5s ease-in-out;
+}
+.img:hover {
+  transform: scale(1.1);
+}
+
+@media screen and (min-width: 950px) {
+  .heading {
+    font-size: 4em;
+  }
+  .img {
+    /* margin: 2em !important; */
+    max-width: 25vw;
+  }
+  .gridlayout {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    gap: 2vw;
+  }
+}
