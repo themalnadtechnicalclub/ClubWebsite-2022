@@ -175,6 +175,7 @@ nav {
   text-align: center;
   font-family: algerian;
   line-height: 1em;
+  font-weight:100;
   /* color: var(--background); */
 
   /* -webkit-text-stroke-color: var(--primary);
