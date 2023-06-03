@@ -200,7 +200,7 @@ nav {
 
 /* hero styling */
 .hero-parent {
-  margin-top: 10vh;
+  margin-top: 3vh;
   min-height: 80vh;
   display: flex;
   justify-content: center;
@@ -467,4 +467,16 @@ nav {
 
 .dark--mode {
   transition: all 0.5s ease-in;
+}
+.announcement p{
+  
+  text-align: center;
+  font-family: primary;
+  font-size: 1.2em;
+}
+.announcement{
+  padding:5vh;
+  border-radius: 10px;
+  margin: 25vh 10vw 0 10vw;
+  background-color: #252525;
 }
